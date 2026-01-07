@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #eee;
+}
+
+.banniere {
+    width: 728px;
+    height: 90px;
+    background-color: #4CAF50; /* vert */
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.texte-anim {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    white-space: nowrap; /* texte sur une seule ligne */
+    position: absolute;
+    left: -100%; /* départ hors écran à gauche */
+    animation: defileTexte 6s linear infinite; 
+}
+
+.image-citron {
+    position: absolute;
+    right: 20px;
+    height: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80px;
+    width: 80px;
+    background-image: url('image/citron-vert.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Animation du texte : de gauche vers le centre puis disparaît */
+@keyframes defileTexte {
+    0% { left: -100%; opacity: 0; }
+    30% { opacity: 1; }
+    50% { left: 30%; opacity: 1; } /* milieu de la bannière */
+    60% { opacity: 0; } /* disparaît */
+    100% { left: -100%; opacity: 0; } /* revient au départ */
+}

@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 10%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: left;
+    }
+
+    .cercle-container {
+      display: flex;
+      gap: 15px;
+
+    }
+
+    .cercle1, .cercle2, .cercle3 {
+      background: black;
+      border-radius: 50%;
+      width: 15px; /* Réduire la taille de base pour que la mise à l'échelle soit plus visible */
+      height: 15px;
+      /* Appliquer l'animation à tous les cercles */
+      animation: activation 1.5s infinite ease-in-out;
+    }
+@keyframes activation { 
+
+  0% {
+    transform: scale(0.5); /* Taille minimale */
+    opacity: 0.5;
+}
+50% {
+    transform: scale(1.5); /* Taille maximale ( sa grossit) */
+    opacity: 1;
+}
+100% {
+    transform: scale(0.5); /* Retour à la taille minimale (revient à sa taille normal */
+    opacity: 0.5;
+  }
+
+}
+
+/* decalage entre chaque cercle */
+.cercle2 {
+  animation-delay: 0.2s; /* Décalage pour le deuxième point */
+}
+
+.cercle3 {
+  animation-delay: 0.4s; /* Décalage pour le troisième point */
+}
+
+
+
+.rectangle-container {
+  display: flex;
+  gap: 5px;
+  margin-left: 20%; /* espacement entre le rectangle et les cercles */
+
+}
+
+.rectangle1, .rectangle2, .rectangle3, .rectangle4, .rectangle5,
+.rectangle6, .rectangle7, .rectangle8, .rectangle9 {
+background: red;
+width: 15px;
+height: 100px;
+transform-origin: center;
+animation: waves 1.5s infinite ease-in-out;
+}
+
+@keyframes waves { 
+  0%, 100% {
+      transform: scaleY(1); /* Taille normale */
+  }
+  50% {
+      transform: scaleY(2); /* Réduit subtilement de 10% pour la pulsation */
+  }
+}
+
+.rectangle2 {
+  animation-delay: 0.1s; /* Décalage pour le deuxième point */
+}
+
+.rectangle3{
+  animation-delay: 0.2s; /* Décalage pour le troisième point */
+}
+
+.rectangle4 {
+  animation-delay: 0.3s; /* Décalage pour le deuxième point */
+}
+
+.rectangle5{
+  animation-delay: 0.4s; /* Décalage pour le troisième point */
+}
+
+.rectangle6 {
+  animation-delay: 0.5s; /* Décalage pour le deuxième point */
+}
+
+.rectangle7{
+  animation-delay: 0.6s; /* Décalage pour le troisième point */
+}
+
+.rectangle8 {
+  animation-delay: 0.7s; /* Décalage pour le deuxième point */
+}
+
+.rectangle9{
+  animation-delay: 0.8s; /* Décalage pour le troisième point */
+}
+
+.image-cercle { 
+margin-left: 20%;
+}
+
+.tourbillon {
+width: 70%;
+animation: spin infinite 1s linear; 
+}
+
+@keyframes spin { 
+  0% {
+      transform: rotate(0deg); /* indication de la rotation de départ */
+  }
+  100% {
+      transform: rotate(360deg); 
+
+    }
+}
+
+
+
+

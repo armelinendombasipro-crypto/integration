@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .image-container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+ 
+  .rideau-gauche,
+  .rideau-droit {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: red;
+    transition: transform 1.5s ease-in-out;
+    z-index: 2;
+  }
+  
+
+  .rideau-gauche {
+    left: 0;
+    transform: translateX(0);
+  }
+  
+ 
+  .rideau-droit {
+    right: 0;
+    transform: translateX(0);
+  }
+  
+  
+  .image-container:hover .rideau-gauche {
+    transform: translateX(-100%);
+  }
+  
+  .image-container:hover .rideau-droit {
+    transform: translateX(100%);
+  }

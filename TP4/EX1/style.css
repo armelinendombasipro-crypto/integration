@@ -1,0 +1,33 @@
+h2 {
+    margin-bottom: 20px;
+}
+
+#ex1_container {
+    margin: 20px;
+    padding: 20px;
+    background-color: white; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    gap: 30px;
+}
+
+/* aucun paragraphe visible par défaut */
+#ex1_container > div[id^="paragraphe"] {
+   flex:1;
+    display: none;
+}
+
+/* uniquement le paragraphe ciblé apparaît */
+#ex1_container > div[id^="paragraphe"]:target {
+    display: block;
+}
+
+/* Couleurs */
+li:nth-child(1) a { color: rgb(38, 194, 168); }
+#paragraphe1 h2 { color: rgb(38, 194, 168); }
+
+li:nth-child(2) a { color: rgb(162, 87, 187); }
+#paragraphe2 h2 { color: rgb(162, 87, 187); }
+
+li:nth-child(3) a { color: rgb(220, 130, 51); }
+#paragraphe3 h2 { color: rgb(220, 130, 51); }

@@ -1,0 +1,89 @@
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #aaa;
+    padding-bottom: 10px;
+}
+
+#exo2_container {
+    border: 2px solid #ccc;
+    padding: 20px;
+    background-color: #3d3d3d;
+    color: white;
+    max-width: 700px;
+    margin: auto;
+}
+
+#telechargement {
+    list-style: none;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#telechargement li {
+    border-bottom: 1px solid #777;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+#telechargement li::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+
+/* Icônes fichiers */
+li:has(a[href$=".pdf"])::before { background-image: url('/images/pdf.png'); }
+li:has(a[href$=".doc"])::before { background-image: url('../images/doc.png'); }
+li:has(a[href$=".xls"])::before { background-image: url('../images/xls.png'); }
+li:has(a[href$=".ppt"])::before { background-image: url('../images/ppt.png'); }
+li:has(a[href$=".png"])::before { background-image: url('../images/png.png'); }
+li:has(a[href$=".svg"])::before { background-image: url('../images/svg.png'); }
+li:has(a[href$=".zip"])::before { background-image: url('../images/zip.png'); }
+li:has(a[href$=".rtf"])::before { background-image: url('../images/rtf.png'); }
+li:has(a[href$=".ods"])::before { background-image: url('../images/ods.png'); }
+
+#telechargement a::before {
+    content: attr(href) " ("; 
+    font-weight: normal;
+    color: #ccc;
+    margin-right: 0;
+}
+
+#telechargement a::after {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+a[hreflang="fr"]::after {
+    content: " )"; 
+    background-image: url('../images/fr.jpg'); 
+    background-size: 20px 15px; 
+    background-repeat: no-repeat;
+    background-position: 0px center; 
+    padding-left: 25px; 
+    display: inline-block;
+    vertical-align: middle;
+    width: auto; 
+    height: 15px;
+    margin-left: 5px; 
+}
+
+a[hreflang="en"]::after {
+    content: " )"; 
+    background-image: url('../images/en.jpg'); 
+    background-size: 20px 15px; 
+    background-repeat: no-repeat;
+    background-position: 0px center; 
+    padding-left: 25px; 
+    display: inline-block;
+    vertical-align: middle;
+    width: auto; 
+    height: 15px;
+    margin-left: 5px; 
+}

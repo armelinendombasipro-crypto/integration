@@ -1,0 +1,38 @@
+.render-box-content{
+    padding: 15px;
+    margin-top: 15px; 
+    margin-bottom: 20px; 
+    background-color: transparent;
+    box-shadow: 0 4px 8px rgba(219, 135, 135, 0.1); 
+    position: relative;
+}
+
+.parallaxe-section {
+    margin: 40px 0; 
+    padding: 100px 20px; 
+    min-height: 60vh; 
+    text-align: center;
+    color: rgb(245, 31, 31); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.parallaxe-img-1 {
+    background-image: url('../images/1.png'); 
+}
+
+.parallaxe-img-2 {
+    background-image: url('../images/2.png'); 
+}
+
+.parallaxe-title {
+    font-size: 2.5em;
+    text-shadow: 3px 3px 6px black; 
+}
+
+#exo6_parallaxe_container {
+    background-color: #a62e2e; 
+}

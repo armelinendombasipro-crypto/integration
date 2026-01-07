@@ -1,0 +1,21 @@
+#container-ex5 {
+    padding: 15px;
+    margin: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#mainCanvas {
+    border: 1px solid #ccc;
+    cursor: none;
+    display: block;
+    margin: auto;
+}
+
+#magnifierCanvas {
+    margin-top: 15px;
+    border: 3px solid #a8c080;
+    border-radius: 50%;
+    pointer-events: none;
+}

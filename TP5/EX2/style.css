@@ -1,0 +1,26 @@
+.render-box-content{
+    padding: 15px;
+    margin-top: 15px; 
+    margin-bottom: 20px; 
+    background-color: transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    position: relative;
+    overflow: hidden; 
+}
+
+.exo-step.theme-light {
+    background-color: transparent; 
+    color: #333;
+}
+
+
+#exo2_scrollable_content {
+    height: 350px; 
+    overflow-y: scroll;
+    padding: 15px;
+    background-color: #f0f0f0; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio de TP</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header>
+        <div class="user-info">
+            <strong>
+                <a href="index.html">Armeline Ndombasi Kibula</a>
+            </strong>
+        </div>
+        <nav id="nav-tp-links">
+            </nav>
+    </header>
+    <main>
+        <section id="welcome-area">
+            <h1>Bonjour, bienvenue sur le site de Armeline Ndombasi Kibula</h1>
+            <br>
+            <p> Le site à pour but de présenter tout les exercices réalisés en dévelopemment front et intégration </p>
+           
+            <p> Ce module m'a permis de passer du positionnement CSS à la logique JavaScript. Au début, Flexbox et Grid étaient durs à gérer, mais avec l'inspecteur et les exercices des grenouilles, j'ai fini par comprendre comment structurer une page proprement. Le plus gratifiant a été de découvrir qu'on pouvait carrément dessiner avec le JavaScript : entre les calculs de points pour le poulet, la gestion des calques pour Pac-Man et la récupération des pixels pour la loupe, j'ai vu que le web c'était bien plus que du texte. Pour la suite, ce serait cool d'avoir des exercices un peu moins brutaux au démarrage, car passer d'un coup à des difficultés de 9/10 comme le Canvas ou les chemins d'images compliqués, c'est parfois décourageant. Une meilleure explication sur les calculs d'échelles et les serveurs locaux aiderait aussi à moins bloquer sur la syntaxe. Au final, je repars avec de bonnes bases pour rendre un site interactif et vivant.</p>
+            <p>Veuillez sélectionner le TP que vous souhaitez consulter :</p>
+            <div id="welcome-buttons" class="tp-grid"></div>
+        </section>
+
+        <section id="tp-viewer" class="hidden">
+            <h2 id="current-tp-title"></h2>
+            <div id="exercises-container">
+                </div>
+
+            <div class="navigation-arrows">
+                <button onclick="changeTP(-1)" id="btn-prev">← TP Précédent</button>
+                <button onclick="changeTP(1)" id="btn-next">TP Suivant →</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Ndombasi Kibula Armeline - Tous droits réservés &copy; 2026</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
