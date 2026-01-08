@@ -32,8 +32,14 @@ header a[href="index.html"] {
     text-decoration: none !important;
     font-weight: bold;
 }
+
 header strong {
     font-size: 1.2rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
 }
 
 nav a {
@@ -48,13 +54,13 @@ nav a:hover {
     color: #3498db;
 }
 
-/* Style pour le paragraphe de synthèse dans la section de bienvenue */
+/* Style pour le paragraphe de synthèse */
 #welcome-area p:nth-of-type(2) {
     background: #ffffff;
     padding: 25px;
     border-radius: 15px;
-    border-left: 6px solid #fb784d; /* L'orange de tes boutons */
-    border-right: 6px solid #89589e; /* Le violet de ton header */
+    border-left: 6px solid #fb784d;
+    border-right: 6px solid #89589e;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     margin: 30px auto;
     max-width: 900px;
@@ -65,7 +71,6 @@ nav a:hover {
     position: relative;
 }
 
-/* Petit ajout décoratif : une citation avant le texte */
 #welcome-area p:nth-of-type(2)::before {
     content: "“";
     font-size: 50px;
@@ -90,7 +95,7 @@ main {
     display: none;
 }
 
-/* Section Bienvenue et Boutons d'accueil */
+/* Section Bienvenue */
 .welcome-section {
     margin-bottom: 50px;
 }
@@ -119,10 +124,10 @@ main {
     padding-left: 10px;
 }
 
-/* L'Iframe (la fenêtre du TP) */
+/* L'Iframe */
 iframe {
     width: 100%;
-    height: 600px; /* Hauteur confortable pour voir l'exercice */
+    height: 600px;
     border: 1px solid #eee;
     border-radius: 8px;
 }
@@ -135,7 +140,7 @@ iframe {
     gap: 20px;
 }
 
-/* Zone globale des commentaires en bas */
+/* Zone des commentaires */
 .comment-section-bottom {
     margin-top: 50px;
     padding-top: 30px;
@@ -143,31 +148,20 @@ iframe {
     text-align: left;
 }
 
-.comment-section-bottom h2 {
-    margin-bottom: 20px;
-}
-
-/* Grille pour aligner les blocs de commentaires côte à côte */
 .comment-grid {
     display: flex;
-    flex-wrap: wrap; /* Permet de revenir à la ligne s'il y en a trop */
+    flex-wrap: wrap;
     gap: 20px;
 }
 
-/* Chaque petit bloc de commentaire */
 .comment-box {
     flex: 1;
-    min-width: 250px; /* Largeur minimum pour ne pas être trop serré */
+    min-width: 250px;
     background: #ffffff;
     padding: 15px;
     border-radius: 8px;
     border-left: 5px solid #fdbb2d;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-.comment-box h4 {
-    color: #1a2a6c;
-    margin-bottom: 5px;
 }
 
 button {
@@ -197,4 +191,48 @@ footer {
     text-align: center;
     padding: 25px;
     margin-top: 50px;
+}
+
+/* --- AJOUT POUR LA RESPONSIVITÉ MOBILE --- */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Empile le titre et le menu */
+        padding: 1.5rem 1rem;
+        gap: 15px;
+    }
+
+    header strong {
+        font-size: 1.1rem;
+    }
+
+    nav {
+        flex-wrap: wrap; /* Permet aux liens de passer à la ligne */
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        margin-left: 0; /* Supprime l'écart forcé à gauche */
+        padding: 5px 12px;
+        background: rgba(255, 255, 255, 0.15); /* Rend les liens plus cliquables */
+        border-radius: 20px;
+        font-size: 0.85rem;
+    }
+
+    main {
+        padding: 20px 5%; /* Réduit les marges sur le côté pour gagner de la place */
+    }
+
+    iframe {
+        height: 450px; /* On réduit un peu la hauteur de l'iframe sur mobile */
+    }
+
+    .navigation-arrows {
+        flex-direction: column; /* Boutons l'un au dessus de l'autre */
+    }
+
+    .navigation-arrows button {
+        width: 100%;
+    }
 }
