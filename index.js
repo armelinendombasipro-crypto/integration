@@ -82,10 +82,15 @@ function loadTP(num) {
         container.innerHTML = "<p>Aucun exercice disponible pour ce TP.</p>";
     } else {
         paths.forEach((path, index) => {
+            // On cherche le numéro après "EX" dans le chemin du fichier
+            const match = path.match(/EX(\d+)/i);
+            // Si on trouve un chiffre (ex: 5), on l'utilise. Sinon, on garde l'ordre (1, 2, 3...)
+            const exoNumber = match ? match[1] : index + 1;
+
             const div = document.createElement('div');
             div.className = "exo-block";
             div.innerHTML = `
-                <h3>Exercice ${index + 1}</h3>
+                <h3>Exercice ${exoNumber}</h3>
                 <iframe src="${path}"></iframe>
             `;
             container.appendChild(div);
@@ -102,9 +107,12 @@ function loadTP(num) {
         grid.className = "comment-grid";
         
         comments.forEach((text, index) => {
+            const match = paths[index] ? paths[index].match(/EX(\d+)/i) : null;
+            const exoNumber = match ? match[1] : index + 1;
+
             const box = document.createElement('div');
             box.className = "comment-box";
-            box.innerHTML = `<h4>EX ${index + 1}</h4><p>${text}</p>`;
+            box.innerHTML = `<h4>EX ${exoNumber}</h4><p>${text}</p>`;
             grid.appendChild(box);
         });
 
